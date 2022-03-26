@@ -1,17 +1,31 @@
 import React from "react";
 import CalenderRowItem from "./CalenderRowItem";
+import {
+  selectCurrentdate,
+  selectDatesbehind,
+  selectDatescome,
+  selectDay,
+} from "./../slices/dateSlice";
+import { useSelector } from "react-redux";
 
 function CalenderRow() {
+  const datesbehind = useSelector(selectDatesbehind);
+  const datescome = useSelector(selectDatescome);
+  const currentdate = useSelector(selectCurrentdate);
+  const day = useSelector(selectDay);
+
   return (
     <div>
       <ul className="flex justify-between items-center cursor-pointer my-2">
-        <CalenderRowItem date="11" day="MON" />
-        <CalenderRowItem date="12" day="TUE" />
-        <CalenderRowItem date="13" day="WED" active="true" />
-        <CalenderRowItem date="14" day="THU" />
-        <CalenderRowItem date="15" day="FRI" />
-        <CalenderRowItem date="16" day="SAT" />
-        <CalenderRowItem date="17" day="SUN" />
+        {datesbehind
+          .map((datebehind) => (
+            <CalenderRowItem key={datebehind} date={datebehind} />
+          ))
+          .reverse()}
+        <CalenderRowItem date={currentdate} active="true" day={day} />
+        {datescome.map((datecome) => (
+          <CalenderRowItem key={datecome} date={datecome} />
+        ))}
       </ul>
     </div>
   );

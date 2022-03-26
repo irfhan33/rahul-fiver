@@ -7,10 +7,14 @@ import ChartStock from "./../components/ChartStock";
 import StockItem from "./../components/StockItem";
 import GainersItem from "./../components/GainersItem";
 import ChartEnterTicket from "./../components/ChartEnterTicket";
+import Head from "next/head";
 
 function stock() {
   return (
     <div className="flex bg-[url('https://i.ibb.co/ZY2ZMrF/background.jpg')]">
+      <Head>
+        <title>Stock</title>
+      </Head>
       {/* Sidebar */}
       <div className="w-[13%]">
         <Sidebar />

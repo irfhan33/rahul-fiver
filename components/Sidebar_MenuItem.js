@@ -7,11 +7,11 @@ function Sidebar_MenuItem({ Icon, Title, active }) {
   return (
     <li
       className={`space-x-5 font-semibold px-4 py-2 ${
-        active && activeClass
+        active === "true" ? activeClass : ""
       } hover:bg-gray-200`}
     >
       <Icon />
-      <a href="">{Title}</a>
+      <span>{Title}</span>
     </li>
   );
 }

@@ -15,10 +15,13 @@ import ProfileAvatar from "./ProfileAvatar";
 import ProfileForm from "./ProfileForm";
 import CategoryItem from "./CategoryItem";
 import CalenderReact from "./CalenderReact";
-
+import Head from 'next/head';
 function Dashboard() {
   return (
     <div className="flex bg-[url('https://i.ibb.co/ZY2ZMrF/background.jpg')]">
+      <Head>
+        <title>Dashboard</title>
+      </Head>
       {/* Sidebar */}
       <div className="w-[13%]">
         <Sidebar />
