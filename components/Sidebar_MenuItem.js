@@ -1,7 +1,8 @@
 import React from "react";
 
 function Sidebar_MenuItem({ Icon, Title, active }) {
-  const activeClass = "bg-gray-200 border-l-4 border-gray-700";
+  const activeClass =
+    "bg-gray-200 border-l-4 border-gray-700 font-[Klavika-Medium]";
 
   return (
     <li

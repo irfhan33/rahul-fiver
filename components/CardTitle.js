@@ -4,7 +4,7 @@ import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOu
 function CardTitle({ children, className, removeButton }) {
   return (
     <div
-      className={`flex border-b-2 relative border-gray-800 mb-1 pb-1 w-full ${className}`}
+      className={`text-2xl flex border-b-2 relative border-gray-800 mb-3 pb-1 w-full ${className}`}
     >
       <span>{children}</span>
       <div className="absolute right-0">

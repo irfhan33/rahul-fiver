@@ -26,10 +26,10 @@ function Dashboard() {
 
       {/* Content */}
       <div className="w-[87%] py-4">
-        <div className="p-4 min-h-screen flex ">
-          <div className="border-2 border-gray-800 w-full min-h-full flex p-4 space-x-4">
+        <div className="p-4 h-full flex  relative">
+          <div className="border-2 border-gray-800 bg-red-300 w-full h-full flex p-4 space-x-4">
             {/* Left Content */}
-            <div className="w-[40%] space-y-4">
+            <div className="w-[40%] space-y-4 flex flex-col">
               <Greetings>Hello, Rahul</Greetings>
 
               {/* Card One */}
@@ -62,7 +62,7 @@ function Dashboard() {
               {/* End Card One */}
 
               {/* Card Budgets */}
-              <Card row="true" className="w-full space-x-2">
+              <Card row="true" className="w-full space-x-2 grow">
                 {/* Left Section Card Budgets */}
                 <div className="w-[50%] border-r-2 border-gray-800 pr-1">
                   <CardTitle>Budgets</CardTitle>
@@ -108,7 +108,7 @@ function Dashboard() {
             </div>
 
             {/* Middle Content */}
-            <div className="w-[30%] space-y-4">
+            <div className="w-[30%] space-y-4 bg-blue-300 h-full flex flex-col ">
               {/* Card Daily Transaction */}
               <Card>
                 <CardTitle className="justify-center">
@@ -157,9 +157,33 @@ function Dashboard() {
               </Card>
 
               {/* Card Upcoming Bills */}
-              <Card>
+              <Card className="grow ">
                 <CardTitle className="justify-center">Upcoming Bills</CardTitle>
                 <div className="space-y-2 flex flex-col w-full">
+                  <TransactionItem
+                    image="food.svg"
+                    title="Sainsburys Groceries"
+                    subTitle="Food"
+                    dayRemaining="9 Days Remaining"
+                    date="Date: 17-03-2022"
+                    textColor="text-red-300"
+                  />
+                  <TransactionItem
+                    image="food.svg"
+                    title="Sainsburys Groceries"
+                    subTitle="Food"
+                    dayRemaining="9 Days Remaining"
+                    date="Date: 17-03-2022"
+                    textColor="text-red-300"
+                  />
+                  <TransactionItem
+                    image="food.svg"
+                    title="Sainsburys Groceries"
+                    subTitle="Food"
+                    dayRemaining="9 Days Remaining"
+                    date="Date: 17-03-2022"
+                    textColor="text-red-300"
+                  />
                   <TransactionItem
                     image="food.svg"
                     title="Sainsburys Groceries"
@@ -232,7 +256,7 @@ function Dashboard() {
                 <CardTitle className="justify-center w-[70%]">
                   Calender
                 </CardTitle>
-                <CurrentDate />
+                {/* <CurrentDate /> */}
                 <CalenderReact />
               </Card>
             </div>
