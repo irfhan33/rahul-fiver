@@ -27,7 +27,7 @@ function Dashboard() {
       {/* Content */}
       <div className="w-[87%] py-4">
         <div className="p-4 h-full flex  relative">
-          <div className="border-2 border-gray-800 bg-red-300 w-full h-full flex p-4 space-x-4">
+          <div className="border-2 border-gray-800 w-full h-full flex p-4 space-x-4">
             {/* Left Content */}
             <div className="w-[40%] space-y-4 flex flex-col">
               <Greetings>Hello, Rahul</Greetings>
@@ -108,7 +108,7 @@ function Dashboard() {
             </div>
 
             {/* Middle Content */}
-            <div className="w-[30%] space-y-4 bg-blue-300 h-full flex flex-col ">
+            <div className="w-[30%] space-y-4 h-full flex flex-col ">
               {/* Card Daily Transaction */}
               <Card>
                 <CardTitle className="justify-center">
